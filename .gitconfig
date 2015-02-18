@@ -1,0 +1,16 @@
+[push]
+	default = simple
+[user]
+	name = Eirik Mildestveit Hammerstad
+	email = emh@dips.no
+[credential]
+	helper = !'/cygdrive/C/Users/emh/AppData/Roaming/GitCredStore/git-credential-winstore.exe'
+[core]
+	autocrlf = false
+[alias]
+	logtree = log --graph --oneline --decorate --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	aliases = "!git config -l | grep alias | cut -c 7-"
+	find = "!git ls-files | grep -i"
+	logme = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --author=Hammerstad
