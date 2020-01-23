@@ -64,3 +64,7 @@ alias dir='ls --color=auto --format=vertical'
 alias ll='ls -alF'                              # long list
 alias la='ls -A'                              # all but . and ..
 alias l='ls -CF'                              #
+
+all_lines(){
+    find . -not -path "./.git/*" -type f | xargs wc -l | sed 's/\([[:digit:]]\+\).*\.\(.*\)/\2 \1/g' | sort -k2 | awk '!/total/' | awk '{a[$1]+=$2}END{for(i in a) print i,a[i]}'
+}
